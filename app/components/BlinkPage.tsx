@@ -46,6 +46,8 @@ const ManyActions = ({ adapter }: { adapter: ActionAdapter }) => {
         <Blink
           action={action as Action}
           websiteText={new URL(action?.url.toString() as string).hostname}
+          securityLevel="all"
+          stylePreset="x-dark"
         />
       </div>;
     });
