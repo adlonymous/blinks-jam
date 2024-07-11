@@ -14,8 +14,8 @@ export const BlinkPage = () => {
 const ManyActions = ({ adapter }: { adapter: ActionAdapter }) => {
   const apiUrls = useMemo(
     () => [
-      "https://localhost:3002/api/actions/transfer-sol",
-      "https://localhost:3002/api/actions/transfer-spl",
+      "https://blinks-jam.vercel.app/api/actions/transfer-sol",
+      "https://blinks-jam.vercel.app/api/actions/transfer-spl",
     ],
     []
   ); //include your different actions
@@ -49,9 +49,6 @@ const ManyActions = ({ adapter }: { adapter: ActionAdapter }) => {
         />
       </div>;
     });
-    for (let i = 0; i <= actions.length; i++) {
-      console.log(new URL(actions[i]?.url.toString() as string));
-    }
   } else {
     return null;
   }
